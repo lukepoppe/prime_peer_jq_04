@@ -23,16 +23,29 @@ $(document).ready(function() {
 
     $('.function').on('click', function (e) {
         e.preventDefault();
-        console.log($(this).val());
-        method = $(this).val();
-        num = string;
-        $('.calculationTwo').append("<p>" + method + "</p>");
-        console.log(num);
-        string = "";
+        if (method != ""){
+            method = "";
+            console.log($(this).val());
+            method = $(this).val();
+            //num = string;
+            $('.calculationTwo').children().remove();
+            $('.calculationTwo').append("<p>" + method + "</p>");
+            console.log(num);
+            string = "";
+        } else if (method == "") {
+            console.log($(this).val());
+            method = $(this).val();
+            num = string;
+            $('.calculationTwo').children().remove();
+            $('.calculationTwo').append("<p>" + method + "</p>");
+            console.log(num);
+            string = "";
+        }
 
 
     });
     $('.eq').on('click', function () {
+
         string = parseInt(string);
        num = parseInt(num);
 
@@ -44,7 +57,12 @@ $(document).ready(function() {
         console.log(numberTwo);
         builder(numberOne, numberTwo, method);
         displayResults = results;
+        $('.calculationFour').children().remove();
         $('.calculationFour').append("<p>"+displayResults+"</p>");
+    });
+
+    $('.clear').on('click', function () {
+        location.reload();
     });
 });
 

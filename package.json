@@ -1,0 +1,25 @@
+{
+  "name": "prime_peer_jq_04",
+  "version": "1.0.0",
+  "description": "Prime Peer JQ 04",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clarejacky/prime_peer_jq_04.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clarejacky/prime_peer_jq_04/issues"
+  },
+  "homepage": "https://github.com/clarejacky/prime_peer_jq_04",
+  "dependencies": {
+    "express": "^4.12.3",
+    "node": "0.0.0",
+    "path": "^0.11.14"
+  }
+}
